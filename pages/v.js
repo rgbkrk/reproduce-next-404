@@ -1,5 +1,4 @@
 // @flow
-import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 
@@ -18,10 +17,8 @@ export default class extends React.Component {
     console.log(this.props.basePath);
     return (
       <div>
-        <Head>
-          <title>{this.props.basePath}</title>
-        </Head>
         <pre>{this.props.basePath}</pre>
+        <p>Click the link below, watch the 404 flicker</p>
         <Link href={`/v/something/awesome`} prefetch>
           <a>/v/something/awesome</a>
         </Link>
